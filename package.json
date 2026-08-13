@@ -1,0 +1,21 @@
+{
+  "name": "ledgr",
+  "version": "0.1.0",
+  "description": "TypeScript client for the Ledgr double-entry ledger API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["ledger", "double-entry", "fintech", "api-client"],
+  "author": "Samuel Ailemen",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
