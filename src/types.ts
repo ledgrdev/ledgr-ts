@@ -27,6 +27,7 @@ export interface Program {
   currency_code: string;
   program_type: ProgramType;
   status: ProgramStatus;
+  allows_negative_balances: boolean;
   metadata: Record<string, unknown> | null;
   created_at: string;
 }
@@ -35,11 +36,13 @@ export interface CreateProgramParams {
   program_name: string;
   currency_code: string;
   program_type?: ProgramType;
+  allows_negative_balances?: boolean;
   metadata?: Record<string, unknown>;
 }
 
 export interface UpdateProgramParams {
   program_name?: string;
+  allows_negative_balances?: boolean;
   metadata?: Record<string, unknown> | null;
   terminate?: boolean;
 }
@@ -67,6 +70,7 @@ export interface Entity {
   entity_type: EntityType;
   currency_code: string;
   status: EntityStatus;
+  allows_negative_balances?: boolean | null;
   created_at?: string;
   metadata?: Record<string, unknown> | null;
   balance?: EntityBalance;
@@ -81,12 +85,14 @@ export interface EntitySearchResult {
 export interface CreateEntityParams {
   entity_name: string;
   entity_type: EntityType;
+  allows_negative_balances?: boolean;
   metadata?: Record<string, unknown>;
 }
 
 export interface UpdateEntityParams {
   entity_id: string;
   status?: EntityStatus;
+  allows_negative_balances?: boolean | null;
   metadata?: Record<string, unknown> | null;
 }
 
