@@ -1,5 +1,5 @@
 {
-  "name": "ledgr",
+  "name": "ledgr-api",
   "version": "0.1.0",
   "description": "TypeScript client for the Ledgr double-entry ledger API",
   "main": "dist/index.js",

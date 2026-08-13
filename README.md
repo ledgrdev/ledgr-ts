@@ -5,13 +5,13 @@ TypeScript client for the [Ledgr](https://ledgr.dev) double-entry ledger API.
 ## Install
 
 ```bash
-npm install ledgr
+npm install ledgr-api
 ```
 
 ## Quick start
 
 ```ts
-import { Ledgr } from 'ledgr';
+import { Ledgr } from 'ledgr-api';
 
 const ledgr = new Ledgr({ apiKey: 'sk_live_...' });
 
@@ -259,7 +259,7 @@ const entity = await ledgr.entities.create(
 All API errors throw a `LedgrError` with the HTTP status, error code, message, and request ID.
 
 ```ts
-import { LedgrError } from 'ledgr';
+import { LedgrError } from 'ledgr-api';
 
 try {
   await ledgr.entities.defund(programId, { entity_id: entityId, amount: 999_999_999 });
